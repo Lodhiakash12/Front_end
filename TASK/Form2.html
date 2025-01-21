@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <table cellpadding="3">
+            <legend>Customer</legend>
+            <tr>
+                <th align="left">
+                    <label>Name*</label>
+                </th>
+                <td>
+                    <input type="text" placeholder="Name" value="" title="Name data" pattern="[a-zA-z ]{3,15}" maxlength="15" required>
+                </td>
+            </tr>
+
+            <tr>
+                <th align="left">
+                    <label>Email*</label>
+                </th>
+                <td>
+                    <input type="email" placeholder="Email" value="" title="Email data" pattern="[a-z0-9]+@+[a-z]+.+[a-z]{2,3}$" required>
+                </td>
+            </tr>
+
+            <tr>
+                <th align="left">
+                    <label>Investment</label>
+                </th>
+                <td>
+                    <select required>
+                        <option value=""><b>Please Select</b></option>
+                        <option value="">NFTS</option>
+                        <option value="">CRYPTO</option>
+                        <option value="">Stocks</option>
+                        <option value="">ETFs</option>
+                        <option value="">Options</option>
+                </td>
+            </tr>
+
+            <tr>
+                <th align="left">
+                    Date Joined*
+                </th>
+                <td>
+                    <input type="date" value="" title="Date data" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                </td>
+            </tr>
+
+            <tr>
+                <th align="left">
+                    Active
+                </th>
+                <td>
+                    <input type="checkbox" value="" title="Active data">
+                </td>
+            </tr>
+
+        </table>
+    </fieldset><br>
+
+    <button>OK</button>
+    <button>Cancel</button>
+    </form>
+</body>
+</html>
