@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 380px;
+            width: 280px;
+
+            margin: 200px auto;
+            box-shadow: 0 0 20px rgb(214, 103, 103);
+            align-content: center;
+            padding-bottom: 70px;
+            position: relative;
+            border: 2px solid black;
+            overflow: hidden;
+           
+             
+
+        }
+
+        .images {
+            height: 200px;
+            width: 170px;
+            background-image: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg);
+            background-size: 100% 100%;
+            position: absolute;
+            top: 10%;
+            left: 18%;
+
+
+
+
+        }
+
+        .images:hover {
+            transform: rotatey(360deg);
+            transition: 0.5s;
+        }
+
+        .quick {
+            height: 40px;
+            width: 280px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+
+
+            border: 2px solid black;
+            position: absolute;
+            bottom: 100%;
+
+
+
+
+        }
+
+        .new {
+            height: 25px;
+            width: 55px;
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: 0%;
+            right: 0px;
+            text-align: center;
+            padding-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .main:hover .quick {
+            position: absolute;
+            transform: translateY(310px);
+            background-color: rgba(0, 0, 0, 1);
+            transition: 1s;
+            border-block-end-color: rgb(195, 238, 238);
+
+        }
+
+        .quick:hover{
+            color: antiquewhite;
+            background-color: aqua;
+        }
+
+        .div {
+            height: 152px;
+            width: 280px;
+            background-color: rgb(249, 253, 252);
+            position: relative;
+            
+            bottom: 0%;
+            top: 52%;
+            color: white;
+            text-align: center;
+            justify-self: center;
+
+
+        }
+
+        .text {
+            height: 50px;
+            width: 280px;
+            color: black;
+            position: absolute;
+            
+            top: 0px;
+         
+            text-align: center;
+            font-size: 15px;
+            background-color: white;
+        }
+
+
+
+        .button {
+            height: 30px;
+            width: 230px;
+            background-color: rgb(21, 216, 216);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-family: sans-serif;
+            padding-top: 30px;
+             
+            cursor: pointer;
+            position: relative;
+            
+
+            line-height: 5px;
+            position: absolute;
+            top: 48%; 
+            right: 10%;           
+            
+            
+
+
+
+        }
+
+        .border {
+            height: 55px;
+            width: 225px;
+            border: 3px solid rgb(21, 216, 216);
+
+            transform: scale(1);
+            position: absolute;
+            bottom: 2%;
+
+
+
+
+
+        }
+
+        .button:hover .border {
+            transform: scale(1.1);
+            transition: 0.5s;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="images">
+
+        </div>
+        <div class="quick">
+            QUICK VIEW
+        </div>
+        <div class="new">New</div>
+        <div class="div">
+            <div class="text">
+                <p> ANALOG WATCH <br>
+                    $160.00
+                </p>
+            </div>
+
+
+            <div class="button">ADD TO CART
+                <div class="border"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
