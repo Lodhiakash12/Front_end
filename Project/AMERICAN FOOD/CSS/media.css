@@ -1,0 +1,35 @@
+ 
+@media only screen and (max-width:1160px) {
+    
+}
+@media only screen and (max-width:992px) {
+    
+}
+@media only screen and (max-width:768px) {
+    .lists{
+        display: none;
+    }
+    .icon .search{
+        display: none;
+    }
+    .icon .bar{
+        display: block;
+    }
+    .data .hr{
+        width: 200px;
+    }
+    .data .p-header {
+        width: 80%;
+    }
+    .aboutus .p-about{
+        width: 90%;
+    }
+    .about-main .abouts{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+}
+@media only screen and (max-width:576px) {
+    
+}
