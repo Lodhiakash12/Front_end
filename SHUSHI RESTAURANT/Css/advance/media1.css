@@ -1,0 +1,292 @@
+/* Media Queries for responsive design */
+
+/* Large screens (1200px and above) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Medium to large screens (992px to 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .data {
+        padding-left: 50%;
+    }
+    
+    .data .h1-header {
+        font-size: 55px;
+    }
+    
+    .order-content .h2-order,
+    .order-content1 .h2-order1 {
+        font-size: 50px;
+    }
+    
+    .order-content .p-order,
+    .order-content1 .p-order1 {
+        font-size: 20px;
+        width: 90%;
+    }
+    
+    .stats1 {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .stats1 .stats-h1 {
+        font-size: 50px;
+    }
+    
+    .subscribe-container {
+        width: 80%;
+        margin: 0 auto 50px;
+    }
+}
+
+/* Medium screens (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        max-width: 720px;
+    }
+    
+    /* Header adjustments */
+    .list .nav-a {
+        font-size: 16px;
+    }
+    
+    .data {
+        padding-left: 40%;
+    }
+    
+    .data .h1-header {
+        font-size: 45px;
+    }
+    
+    .data .p-header {
+        width: 90%;
+        font-size: 18px;
+    }
+    
+    /* Price section */
+    .price-main .row {
+        flex-wrap: wrap;
+    }
+    
+    .price-main .row .col {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+    
+    /* Order sections */
+    .order-main .row .col,
+    .order-main1 .row .col {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .order-card, .order-content,
+    .order-card1, .order-content1 {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .order-content, .order-content1 {
+        margin-top: 30px;
+    }
+    
+    .order-content .h2-order,
+    .order-content1 .h2-order1 {
+        font-size: 40px;
+    }
+    
+    .order-content .p-order,
+    .order-content1 .p-order1 {
+        width: 100%;
+        font-size: 18px;
+        margin: 20px auto;
+    }
+    
+    /* Stats section */
+    .circle {
+        flex-wrap: wrap;
+    }
+    
+    .circle .circle1 {
+        width: 50%;
+        margin: 20px 0;
+    }
+    
+    /* Fan section */
+    .fan-content1 .p-fan1 {
+        font-size: 20px;
+    }
+    
+    /* Email section */
+    .subscribe-container {
+        width: 90%;
+        margin: 0 auto 50px;
+    }
+    
+    /* Footer */
+    #Footer .row .col-4,
+    #Footer .row .col-6 {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    #Footer .row .col-4 {
+        padding-right: 0;
+    }
+}
+
+/* Small screens (576px to 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+    
+    /* Header section */
+    .lists {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .lists.active {
+        right: 0;
+    }
+    
+    .lists .list {
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .list .nav-a {
+        font-size: 20px;
+    }
+    
+    .icon .bar {
+        display: block;
+        cursor: pointer;
+        margin-left: 15px;
+        z-index: 1001;
+    }
+    
+    .icon .search {
+        display: none;
+    }
+    
+    .main-content {
+        background-position: 20% center;
+    }
+    
+    .data {
+        padding-left: 0;
+        text-align: center;
+        padding: 60px 0;
+    }
+    
+    .data .h1-header {
+        font-size: 36px;
+    }
+    
+    .data .p-header {
+        width: 90%;
+        margin: 30px auto;
+        font-size: 18px;
+    }
+    
+    .data .btn-header {
+        margin: 30px auto 0;
+        display: block;
+    }
+    
+    /* Price section */
+    .price .h2-price {
+        font-size: 32px;
+    }
+    
+    .price .p-price {
+        width: 90%;
+        font-size: 18px;
+    }
+    
+    .price-main .row {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .price-main .row .col {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .priceimg, .priceimg1, .priceimg2 {
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* Order sections */
+    .order-main .row,
+    .order-main1 .row {
+        padding: 60px 0;
+    }
+    
+    .order-main .row .col,
+    .order-main1 .row .col {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .order-main1 .row .col {
+        flex-direction: column-reverse;
+    }
+    
+    .order-card, .order-card1,
+    .order-content, .order-content1 {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .order-content, .order-content1 {
+        margin-top: 30px;
+    }
+    
+    .orderimg, .orderimg1 {
+        margin: 0 auto;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .order-content .h2-order,
+    .order-content1 .h2-order1 {
+        font-size: 32px;
+    }
+    
+    .order-content .p-order,
+    .order-content1 .p-order1 {
+        width: 100%;
+        font-size: 18px;
+        margin: 20px auto;
+    }
+    

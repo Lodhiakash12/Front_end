@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    
+    <style>
+         
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+ 
+.profile-card {
+    width: 320px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  
+}
+
+.profile-header {
+    height: 120px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    position: relative;
+}
+
+.profile-image-container {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;  
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.profile-content {
+    padding: 80px 20px 30px;  
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    color: #6a11cb;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.profile-bio {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.follow-button {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.follow-button:hover {
+    background-color: #5a0db6;
+    transform: translateY(-2px);
+}
+
+.follow-button:active {
+    transform: translateY(0);
+}
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-image-container">
+                <img src="/img/WhatsApp Image 2025-03-13 at 08.43.51.jpeg" alt="Profile Picture" class="profile-image">
+            </div>
+        </div>
+        <div class="profile-content">
+            <h2 class="profile-name">Lodhi Aakash</h2>
+            <p class="profile-title">Web Developer</p>
+            <p class="profile-bio">Passionate web developer with expertise in HTML, CSS, and JavaScript. Love creating responsive and user-friendly websites. In my free time, I enjoy hiking and photography.</p>
+            <button class="follow-button">Follow</button>
+        </div>
+    </div>
+</body>
+</html>
