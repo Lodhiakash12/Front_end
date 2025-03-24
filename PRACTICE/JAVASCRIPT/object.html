@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            name: "Harsh",
+            surname: "Patel",
+            age: 23,
+            Course : {
+                Front: "Frontend",
+                Back: "Backend",
+                Full: "Full stack"
+            }
+        }
+
+        console.log(person.Course["Full"])
+        console.log(person.Course)
+        document.write(person.Course["Full"],"<br>")
+        document.write(person.name,"<br>")
+
+        for (let data in person.course){
+             
+            document.write(person.course[data],["<br"])
+        }
+
+
+    </script>
+
+</body>
+
+</html>
