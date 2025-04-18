@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 700px;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M5-2025/11821/1719462197562/front-left-side-47.jpg?impolicy=resize&imwidth=480"
+            height="100%" width="100%" class="img" alt="">
+        <img src="https://www.spinny.com/blog/wp-content/uploads/2024/09/videoframe_0.webp" height="100%" width="100%"
+            class="img" alt="">
+        <img src="https://static.writearn.in/1682146385413_coolest-cars-feature_jpg.jpg" height="100%" width="100%"
+            class="img" alt="">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/02-us-chiron-1513866058.jpg?crop=1.00xw:0.752xh;0,0.221xh&resize=640:*"
+            height="100%" width="100%" class="img" alt="">
+    </div>
+
+    <button onclick="silder()">Next image</button>
+
+
+
+    <!-- <h1>Hello this tag</h1> -->
+
+    <script>
+
+        // let img_tag = document.getElementsByTagName("img")
+        // console.log(img_tag)
+
+        let index = 0
+
+        function silder() {
+
+
+            let img_tag = document.getElementsByClassName("img")
+            // console.log(img_tag)
+
+            for (let i = 0; i < img_tag.length; i++) {
+                // console.log(img_tag[i])
+
+                img_tag[i].style.display = "none";
+            }
+
+            img_tag[index].style.display = "block";
+            index++;
+            // image ++ 
+
+            // base codition 
+            if (index == 4) {
+                index = 0;
+            }
+
+            // setTimeout(silder,1000)
+
+
+        }
+
+        silder()
+
+    </script>
+</body>
+
+</html>
