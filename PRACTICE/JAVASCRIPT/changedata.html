@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1" onmouseenter="data()" onmouseleave="changedata()">hello this h1 tag</h1>
+
+    <button onclick="data()">Click me</button>
+ 
+    <h2 id="h2"></h2>
+    <button onclick="Change()">Change</button>
+    <button onclick="Changed()">Change</button>
+
+    <script>
+        function data() {
+            console.log("clike me");
+
+            document.getElementById("h1").innerText = "Hello javascript";
+            document.getElementById("h1").style.background = "red";
+        }
+
+        function changedata() {
+            console.log("change data")
+
+            document.getElementById("h1").innerText = "Change data";
+            document.getElementById("h1").style.background = "blue";
+        }
+        function Changed() {
+            console.log("change")
+
+            document.getElementById("h2").innerText = "This is new Html";
+            document.getElementById("h2").style.backgroundColor = "green";
+        }
+        function Change() {
+            console.log("change")
+
+            document.getElementById("h1").innerText = "This is new Html";
+            document.getElementById("h1").style.backgroundColor = "green";
+        }
+       
+
+
+
+    </script>
+</body>
+
+</html>

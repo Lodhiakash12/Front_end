@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+            background-color: red;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://t4.ftcdn.net/jpg/04/62/20/55/240_F_462205584_qSpUXzQbk7MK3pQ9TQzNv0FnAbZg1vT3.jpg" alt=""
+            id="img" height: 400px; width: 100%;>
+    </div>
+    <button class="btn" onclick="change()">Next</button>
+
+    <script>
+
+        img_tag = document.getElementById("img")
+
+        function change() {
+            if (img_tag.src.match("https://t4.ftcdn.net/jpg/04/62/20/55/240_F_462205584_qSpUXzQbk7MK3pQ9TQzNv0FnAbZg1vT3.jpg")) {
+                img_tag.src = "https://t3.ftcdn.net/jpg/03/97/49/30/240_F_397493010_LLJJsJxxvJxvNOsNwPiZ6EC03JKHyiiA.webp"
+            }
+            else if(img_tag.src.match("https://t3.ftcdn.net/jpg/03/97/49/30/240_F_397493010_LLJJsJxxvJxvNOsNwPiZ6EC03JKHyiiA.webp")){
+                img_tag.src="https://t4.ftcdn.net/jpg/05/42/12/29/240_F_542122991_xWhcBL2t7zSsJB8rfnocIKdnhEhEtlIJ.webp"
+            }
+            else{
+                img_tag.src="https://t4.ftcdn.net/jpg/04/62/20/55/240_F_462205584_qSpUXzQbk7MK3pQ9TQzNv0FnAbZg1vT3.jpg"
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

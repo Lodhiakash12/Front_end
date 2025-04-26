@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        class Bank {
+
+            x = function details(pin, Balance) {
+
+                let bankname = "HDFC"
+                let bankCode = "Hdfc121"
+                let AtmPin = pin
+                let bankbalance = Balance
+
+                console.log("Bankname", bankname)
+                console.log("BankIFSC", bankCode)
+                console.log("Atmpin", AtmPin)
+                console.log("BankBlance", bankbalance)
+
+
+            }
+
+            y = function deposit(Amount, Accno) {
+
+                let bankname = "HDFC"
+                let bankCode = "Hdfc121"
+                let Funds = Amount
+                let Accountno = Accno
+
+                console.log("Bankname", bankname)
+                console.log("BankIFSC", bankCode)
+                console.log("Amount",Funds)
+                console.log("Accno",Accountno)
+
+
+            }
+
+            z=function withdrawl(Amt,Card){
+
+                let Funds = Amt
+                let Cardtype=Card
+                console.log("Amount",Funds)
+                console.log("Card Type:",Cardtype)
+
+
+            }
+
+
+
+
+        }
+
+        let aakash = new Bank
+        console.log(aakash)
+
+        aakash.x(345, 54000)
+         
+        aakash.y(2829298,56767998653368)
+        aakash.z(6722,"Debit")
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
