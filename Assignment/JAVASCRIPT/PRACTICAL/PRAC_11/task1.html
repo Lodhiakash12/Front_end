@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #d1 {
+
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            font-size: 20px;
+            text-align: center;
+            border: solid;
+            line-height: 180px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="d1">
+
+        color is White!
+
+    </div>
+
+
+    <script>
+
+
+        setTimeout(function () {
+
+            document.getElementById("d1").innerText = "Color is Blue"
+            document.getElementById("d1").style.backgroundColor = "blue"
+
+
+
+
+
+        }, 5000)
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Enter Number" id="num1">
+    <button onclick="Click()">Check Number</button>
+    <h1 id="h1"></h1>
+    
+    <script>
+        function Click() {
+            let num = parseInt(document.getElementById("num1").value);
+    
+            do {
+                document.getElementById("h1").innerText="The num is Smaller"
+                  
+            } while (num <= 10);
+        }
+    </script>
+    
+
+</body>
+</html>

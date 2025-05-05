@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Button Alert</title>
+    <style>
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 16px;
+            background-color: #c91b1b;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Click the Button</h1>
+        <button id="alertButton">Click Me!</button>
+    </div>
+
+    <script>
+
+        let button = document.getElementById('alertButton');
+
+
+        button.addEventListener('click', function () {
+
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+
+</html>

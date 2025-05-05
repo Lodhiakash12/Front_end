@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your number 1" id="inp1">
+    <input type="text" placeholder="Enter your number 2" id="inp2">
+    <br> <br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <button onclick="comparison()">Compare</button>
+    <button onclick="logical()">logic</button>
+
+
+    <h1 id="h1"></h1>
+
+    <script>
+
+        var num1 = document.getElementById("inp1");
+
+        var num2 = document.getElementById("inp2");
+
+
+        function add() {
+            let sum = parseInt(num1.value) + parseInt(num2.value)
+            console.log("sum =>", sum)
+
+            document.getElementById("h1").innerHTML = `sum => ${sum}`
+        }
+
+        function sub() {
+            let sub = parseInt(num1.value) - parseInt(num2.value)
+            console.log("sub =>", sub)
+            document.getElementById("h1").innerHTML = `sub => ${sub}`
+
+        }
+
+        function mul() {
+            let mul = parseInt(num1.value) * parseInt(num2.value)
+            console.log("mul =>", mul)
+
+            document.getElementById("h1").innerHTML = `mul => ${mul}`
+        }
+        function div() {
+            let div = parseInt(num1.value) / parseInt(num2.value)
+            console.log("div =>", div)
+
+            document.getElementById("h1").innerHTML = `div => ${div}`
+        }
+
+
+
+        function comparison() {
+            if (parseInt(num1.value) > parseInt(num2.value)) {
+                document.getElementById("h1").innerText = "Num1 is Greater";
+                console.log("age is allowed");
+            }
+            else if (parseInt(num1.value) < parseInt(num2.value)) {
+                document.getElementById("h1").innerText = "Num2 is Greater";
+            }
+            else {
+                document.getElementById("h1").innerText = "Both Are Equal";
+            }
+
+
+        }
+
+
+        function logical() {
+            if (parseInt(num1.value) > 10 && parseInt(num2.value) < 5) {
+                console.log("Both conditions are satisfied!");
+                document.getElementById("h1").innerText = "True";
+            } else {
+
+
+
+                if (!(parseInt(num1.value) > 10) && !(parseInt(num2.value) < 5)) {
+
+                } else if (!(parseInt(num1.value) > 10)) {
+
+                } else {
+                    console.log("Second condition (b < 5) failed.");
+                }
+
+                document.getElementById("h1").innerText = "False";
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
