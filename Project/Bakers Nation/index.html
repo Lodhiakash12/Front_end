@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baker's Nation | Artisan Bakery & Cafe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #8d4925;
+            --secondary: #f3cea2;
+            --accent: #e27d5f;
+            --light: #fdf6ec;
+            --dark: #3d2314;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 12rem 0 8rem;
+            margin-top: 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .category-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            position: relative;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .category-btn.active {
+            color: var(--primary);
+        }
+        
+        .category-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card .btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-slide {
+            padding: 2rem;
+            display: none;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .testimonial-controls {
+            margin-top: 2rem;
+        }
+        
+        .slider-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            cursor: pointer;
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+        
+        .slider-btn:hover {
+            color: var(--accent);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 4rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .hours {
+            margin-top: 2rem;
+        }
+        
+        .hours h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Map */
+        .map {
+            width: 100%;
+            height: 400px;
+            margin-top: 4rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .newsletter form {
+            display: flex;
+            max-width: 100%;
+        }
+        
+        .newsletter input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .newsletter button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter button:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            nav {
+                position: relative;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: -1;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .footer-column {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-text">Baker's <span>Nation</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Artisan Breads & Pastries</h1>
+            <p>Handcrafted with love, baked to perfection. Experience the taste of tradition with a modern twist.</p>
+            <a href="#products" class="btn">View Our Bakery</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/api/placeholder/600/400" alt="Baker's Nation bakery interior">
+                </div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, Baker's Nation began as a small family bakery with a passion for creating authentic, handcrafted bread. Our founder, Chef Maria, learned the art of baking from her grandmother, preserving traditional recipes while infusing them with contemporary flavors.</p>
+                    <p>Today, we're proud to be a neighborhood favorite, serving our community with freshly baked goods made from locally sourced, organic ingredients. Every item that leaves our kitchen is crafted with care, expertise, and a commitment to quality that's been our hallmark for over a decade.</p>
+                    <p>At Baker's Nation, we believe in the simple joy of breaking bread together. We're not just baking products; we're creating experiences, memories, and traditions that bring people together.</p>
+                    <a href="#contact" class="btn">Visit Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Freshly Baked Goods</h2>
+            
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="bread">Breads</button>
+                <button class="category-btn" data-category="pastry">Pastries</button>
+                <button class="category-btn" data-category="cake">Cakes</button>
+                <button class="category-btn" data-category="cookie">Cookies</button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Bread Products -->
+                <div class="product-card" data-category="bread">
+                    <img src="/api/placeholder/400/300" alt="Sourdough Bread" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Artisan Sourdough</h3>
+                        <p class="product-price">$6.95</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="bread">
+                    <img src="/api/placeholder/400/300" alt="Multigrain Loaf" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Multigrain Loaf</h3>
+                        <p class="product-price">$5.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="bread">
+                    <img src="/api/placeholder/400/300" alt="Baguette" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">French Baguette</h3>
+                        <p class="product-price">$3.95</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Pastry Products -->
+                <div class="product-card" data-category="pastry">
+                    <img src="/api/placeholder/400/300" alt="Croissant" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Butter Croissant</h3>
+                        <p class="product-price">$3.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="pastry">
+                    <img src="/api/placeholder/400/300" alt="Danish" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Apple Danish</h3>
+                        <p class="product-price">$4.25</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="pastry">
+                    <img src="/api/placeholder/400/300" alt="Cinnamon Roll" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Cinnamon Roll</h3>
+                        <p class="product-price">$4.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Cake Products -->
+                <div class="product-card" data-category="cake">
+                    <img src="/api/placeholder/400/300" alt="Chocolate Cake" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Chocolate Fudge Cake</h3>
+                        <p class="product-price">$32.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="cake">
+                    <img src="/api/placeholder/400/300" alt="Cheesecake" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">New York Cheesecake</h3>
+                        <p class="product-price">$28.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Cookie Products -->
+                <div class="product-card" data-category="cookie">
+                    <img src="/api/placeholder/400/300" alt="Chocolate Chip Cookies" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Chocolate Chip Cookies</h3>
+                        <p class="product-price">$2.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="cookie">
+                    <img src="/api/placeholder/400/300" alt="Macarons" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Assorted Macarons</h3>
+                        <p class="product-price">$12.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <p class="testimonial-text">Baker's Nation has the best sourdough bread I've ever tasted! Their commitment to quality ingredients and traditional methods really shows in every bite. I'm a customer for life.</p>
+                    <h4 class="testimonial-author">Sarah Johnson</h4>
+                    <p class="testimonial-role">Local Food Blogger</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">I ordered a custom birthday cake for my daughter and it was absolutely perfect! Not only was it beautiful, but it tasted amazing. The team was so helpful throughout the ordering process too.</p>
+                    <h4 class="testimonial-author">Michael Rodriguez</h4>
+                    <p class="testimonial-role">Happy Parent</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">As someone with dietary restrictions, finding delicious baked goods can be challenging. Baker's Nation has amazing gluten-free options that don't compromise on taste. Their almond flour cookies are incredible!</p>
+                    <h4 class="testimonial-author">Emily Chen</h4>
+                    <p class="testimonial-role">Loyal Customer</p>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Visit Our Bakery</h2>
+                    <p>We'd love to see you in person! Stop by to experience the aroma of freshly baked goods and enjoy a warm treat in our cozy café area.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p>123 Main Street<br>Bakeryville, CA 90210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p>info@bakersnation.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hours">
+                        <h3>Hours of Operation</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday</span> <span>7:00 AM - 7:00 PM</span></li>
+                            <li><span>Saturday</span> <span>8:00 AM - 6:00 PM</span></li>
+                            <li><span>Sunday</span> <span>8:00 AM - 4:00 PM</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone (optional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map">
+                <!-- Placeholder for map -->
+                <img src="/api/placeholder/1200/400" alt="Map to Baker's Nation location" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Baker's Nation</h3>
+                    <p>Artisan bakery committed to quality, tradition, and bringing joy through the simple pleasure of freshly baked goods.</p>
+                    <div class="social-links">
+                        <a href="#" class="social
