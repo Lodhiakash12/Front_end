@@ -7,6 +7,7 @@ function Funobject() {
     const[data,setdata]=useState({
         name:"Aakash",
         count:0,
+        age:0,
         isimage:true
     })
  console.log(data.name)
@@ -28,6 +29,11 @@ function Funobject() {
         <button onClick={()=>setdata({...data,count:data.count+2})}> Increment+2</button>
         <button onClick={increment}>increment</button>
         <button onClick={()=>setdata({...data,count:data.count-2})}> Decrement-2</button>
+
+        <br /> <br />
+
+        <h1>Age:{data.age}</h1>
+        <button onClick={()=>setdata({...data,age:data.age+1})}>increase</button>
 
         <br /> <br />
 

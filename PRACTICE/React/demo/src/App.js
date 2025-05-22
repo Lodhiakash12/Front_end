@@ -5,6 +5,7 @@ import Hello from "./Jsx/Hello";
 import Css from "./CSS/Css"
 import Mainprops from "./Props/MainProps";
 import Mainstate from "./State/Mainstate";
+import Form from "./Form/Form";
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       // {<Hello />}
       // {<Css />} */}
       {/* <Mainprops /> */}
-      <Mainstate />
+      {/* <Mainstate /> */}
+      <Form />
       
 
 
