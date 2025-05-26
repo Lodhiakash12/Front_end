@@ -1,11 +1,16 @@
 import React from "react";
-import Classcompo from "./Component/Classcompo";
-import Funcompo from "./Component/Funcompo";
-import Hello from "./Jsx/Hello";
-import Css from "./CSS/Css"
-import Mainprops from "./Props/MainProps";
-import Mainstate from "./State/Mainstate";
-import Form from "./Form/Form";
+// import Classcompo from "./Component/Classcompo";
+// import Funcompo from "./Component/Funcompo";
+// import Hello from "./Jsx/Hello";
+// import Css from "./CSS/Css"
+// import Mainprops from "./Props/MainProps";
+// import Mainstate from "./State/Mainstate";
+// import Form from "./Form/Form";
+// import Usetable from "./Useeffect/Usetable";
+// import Axios from "./Useeffect/Useaxios";
+// import Useaxios from "./Useeffect/Useaxios";
+// import Usecard from "./Useeffect/Usecard";
+import Table from "./Useeffect/Table";
 
 
 function App() {
@@ -21,7 +26,10 @@ function App() {
       // {<Css />} */}
       {/* <Mainprops /> */}
       {/* <Mainstate /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <Usetable /> */}
+      {/* <Useaxios /> */}
+      <Table />
       
 
 
