@@ -11,6 +11,10 @@ import React from "react";
 // import Useaxios from "./Useeffect/Useaxios";
 // import Usecard from "./Useeffect/Usecard";
 import Table from "./Useeffect/Table";
+import Footerdata from "./Bootstrap/Footerdata";
+import Usecard from "./Useeffect/Usecard";
+import Usecart from "./Useeffect/Usecart";
+import Muinav from "./Bootstrap/Muinav";
 
 
 function App() {
@@ -29,8 +33,12 @@ function App() {
       {/* <Form /> */}
       {/* <Usetable /> */}
       {/* <Useaxios /> */}
-      <Table />
-      
+      {/* <Table /> */}
+      {/* <Footerdata /> */}
+      {/* <Usecart /> */}
+      <Muinav />
+
+
 
 
     </div>
