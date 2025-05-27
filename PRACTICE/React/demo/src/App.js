@@ -15,6 +15,7 @@ import Footerdata from "./Bootstrap/Footerdata";
 import Usecard from "./Useeffect/Usecard";
 import Usecart from "./Useeffect/Usecart";
 import Muinav from "./Bootstrap/Muinav";
+import Mainstate from "./Usecontext/Mainstate";
 
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
       {/* <Table /> */}
       {/* <Footerdata /> */}
       {/* <Usecart /> */}
-      <Muinav />
+      {/* <Muinav /> */}
+
+      <Mainstate />
 
 
 
