@@ -16,35 +16,54 @@ import Usecard from "./Useeffect/Usecard";
 import Usecart from "./Useeffect/Usecart";
 import Muinav from "./Bootstrap/Muinav";
 import Mainstate from "./Usecontext/Mainstate";
+import Home from "./Layout/Pages/Home";
+import Help from "./Layout/Pages/Help";
+import About from "./Layout/Pages/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
   return (
-    <div>
-      {/* <h1>hello this App data</h1> */}
-      {/* <h1>hello this h1</h1> */}
+    <BrowserRouter>
+      <div>
+        {/* <h1>hello this App data</h1> */}
+        {/* <h1>hello this h1</h1> */}
 
-      {/* Compoennt */}
-      {/* <Classcompo /> */}
-      {/* {<Funcompo />}
+        {/* Compoennt */}
+        {/* <Classcompo /> */}
+        {/* {<Funcompo />}
       // {<Hello />}
       // {<Css />} */}
-      {/* <Mainprops /> */}
-      {/* <Mainstate /> */}
-      {/* <Form /> */}
-      {/* <Usetable /> */}
-      {/* <Useaxios /> */}
-      {/* <Table /> */}
-      {/* <Footerdata /> */}
-      {/* <Usecart /> */}
-      {/* <Muinav /> */}
+        {/* <Mainprops /> */}
+        {/* <Mainstate /> */}
+        {/* <Form /> */}
+        {/* <Usetable /> */}
+        {/* <Useaxios /> */}
+        {/* <Table /> */}
+        {/* <Footerdata /> */}
+        {/* <Usecart /> */}
+        {/* <Muinav /> */}
 
-      <Mainstate />
+        {/* <Mainstate /> */}
+        
+
+        
+
+        <Routes>
+
+          <Route path="/" element={<Home />} />
+          <Route path="/Help" element={<Help />} />
+          <Route path="/About" element={<About />} />
+
+
+
+        </Routes>
 
 
 
 
-    </div>
+
+      </div></BrowserRouter>
   )
 }
 
