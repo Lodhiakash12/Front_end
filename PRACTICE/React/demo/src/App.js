@@ -20,6 +20,9 @@ import Home from "./Layout/Pages/Home";
 import Help from "./Layout/Pages/Help";
 import About from "./Layout/Pages/About";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About1 from "./Layout/Pages/About1";
+import About2 from "./Layout/Pages/About2";
+import Notfound from "./Layout/Pages/Notfound";
 
 
 function App() {
@@ -45,19 +48,39 @@ function App() {
         {/* <Muinav /> */}
 
         {/* <Mainstate /> */}
-        
 
-        
+
+
 
         <Routes>
 
           <Route path="/" element={<Home />} />
           <Route path="/Help" element={<Help />} />
-          <Route path="/About" element={<About />} />
+
+
+          <Route path="/About" element={<About />} >
+
+            <Route path="About1" element={<About1 />} />
+            <Route path="About2" element={<About2 />} />
+
+          </Route>
+
+
+
+          {/* ErrorpageK */}
+
+           
+           <Route path="*" element={<Notfound />} />
+
+
 
 
 
         </Routes>
+
+
+         
+        
 
 
 
