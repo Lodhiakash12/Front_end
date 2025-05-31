@@ -11,7 +11,7 @@ import React from "react";
 // import Useaxios from "./Useeffect/Useaxios";
 // import Usecard from "./Useeffect/Usecard";
 import Table from "./Useeffect/Table";
-import Footerdata from "./Bootstrap/Footerdata";
+import Footerdata from "./Layout/Common/Footerdata";
 import Usecard from "./Useeffect/Usecard";
 import Usecart from "./Useeffect/Usecart";
 import Muinav from "./Bootstrap/Muinav";
