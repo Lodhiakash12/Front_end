@@ -12,7 +12,7 @@ function Home() {
       <Header />
 
       {/* SECTIONS 1 STARTS */}
-      <div className="mt-5 pt-5">
+      <div className="mt-2 pt-4">
         <div className='container'>
           <div className="row">
             <div className="col-md-6 d-flex align-items-center">

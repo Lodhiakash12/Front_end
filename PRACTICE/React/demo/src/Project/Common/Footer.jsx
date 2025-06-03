@@ -9,7 +9,7 @@ function Footer() {
           <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div className="mb-4">
               <h4 className="fw-bold mb-3">
-                <span className="text-primary">Digital</span>Marketing
+                <span className="text" style={{color:"orange"}}>Digital</span>Marketing
               </h4>
               <p className="text-muted mb-4" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 Lorem ipsum dolor sit, amet consectetur elit. Pellen tesque libero ut justo, ultrices in 

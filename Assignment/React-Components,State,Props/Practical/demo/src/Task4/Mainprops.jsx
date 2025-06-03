@@ -13,6 +13,7 @@ function Mainprops() {
                 <Classprops name="Aakash" age="20" location="Ahmedabad " />
                 <Classprops name="Aakash" age="20" location="Ahmedabad " />
                 <Classprops name="Aakash" age="20" location="Ahmedabad " />
+                <Classprops />
             </div>
 
         </div>
