@@ -130,7 +130,7 @@ function Header() {
                 <li key={item.id} className="nav-item">
                   <NavLink
                     className="nav-link px-3 py-2 rounded-pill"
-                    to={item.path}
+                    to={item.path} 
                     style={{
                       fontWeight: '500',
                       margin: '0 0.25rem'
