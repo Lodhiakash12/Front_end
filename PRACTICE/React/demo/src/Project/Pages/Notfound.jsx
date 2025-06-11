@@ -35,79 +35,21 @@ function Notfound() {
              
               
               {/* Social Media Buttons */}
-              <div className="d-flex justify-content-center gap-3 mb-5 flex-wrap">
-                <button 
-                  className="btn d-flex align-items-center gap-2 px-4 py-2 mb-2"
-                  style={{ 
-                    backgroundColor: '#3b5998',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '25px',
-                    fontSize: '0.9rem'
-                  }}
-                >
-                  <span style={{ fontSize: '14px' }}>📘</span>
-                  Facebook
-                </button>
-                
-                <button 
-                  className="btn d-flex align-items-center gap-2 px-4 py-2 mb-2"
-                  style={{ 
-                    backgroundColor: '#1da1f2',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '25px',
-                    fontSize: '0.9rem'
-                  }}
-                >
-                  <span style={{ fontSize: '14px' }}>🐦</span>
-                  Twitter
-                </button>
-                
-                <button 
-                  className="btn d-flex align-items-center gap-2 px-4 py-2 mb-2"
-                  style={{ 
-                    backgroundColor: '#e4405f',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '25px',
-                    fontSize: '0.9rem'
-                  }}
-                >
-                  <span style={{ fontSize: '14px' }}>📷</span>
-                  Instagram
-                </button>
-              </div>
               
               {/* Navigation Buttons */}
               <div className="d-flex justify-content-center gap-3 flex-wrap">
-                {/* Back to Home Button with useNavigate */}
-                <button 
-                  className="btn btn-lg px-5 py-3 d-inline-flex align-items-center gap-2 mb-2"
-                  style={{ 
-                    backgroundColor: '#d2691e',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '25px',
-                    fontSize: '1rem',
-                    fontWeight: '500',
-                    boxShadow: '0 4px 12px rgba(210, 105, 30, 0.3)'
-                  }}
-                  onClick={backtohome}
-                >
-                  <span style={{ fontSize: '16px' }}>⬅️</span>
-                  Back To Home
-                </button>
+                
                 
                 {/* Alternative Link Button */}
                 <Link 
                   to="/" 
-                  className="btn btn-outline-primary btn-lg px-5 py-3 d-inline-flex align-items-center gap-2 mb-2"
+                  className="btn btn-outline-primary btn-lg px-5 py-3 d-inline-flex align-items-center gap-2 m-5"
                   style={{ 
                     borderRadius: '25px',
                     fontSize: '1rem',
                     fontWeight: '500',
                     textDecoration: 'none'
+                    
                   }}
                 >
                   <span style={{ fontSize: '16px' }}>🏠</span>

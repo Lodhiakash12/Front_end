@@ -8,7 +8,6 @@ function UserList() {
         { id: 4, name: "Emma" },
         { id: 5, name: "David" }
     ]
-    
     return (
         <div>
             <h2>User List</h2>
