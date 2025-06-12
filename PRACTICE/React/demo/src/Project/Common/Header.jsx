@@ -148,7 +148,7 @@ function Header() {
                 <input 
                   className="form-control border-0"
                   style={{ 
-                    background: 'rgba(255, 255, 255, 0.15)',
+                    background: 'rgba(245, 234, 234, 0.15)',
                     color: 'white',
                     padding: '0.5rem 1rem'
                   }}

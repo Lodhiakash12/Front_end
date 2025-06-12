@@ -8,87 +8,91 @@ function Login() {
     <div>
       <Header />
 
-      <div className="container"> {/* Fixed: was classname */}
-        <section className="vh-100">
-          <div className="container py-5 h-100">
-            <div className="row d-flex align-items-center justify-content-center h-100">
-              <div className="col-md-8 col-lg-7 col-xl-6">
-                <img 
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" 
-                  className="img-fluid" 
-                  alt="Phone image" 
-                />
+      {/* Section: Design Block */}
+      <section className>
+        {/* Jumbotron */}
+        <div className="px-4 py-5 px-md-5 text-center text-lg-start" style={{ backgroundColor: 'hsl(0, 0%, 96%)' }}>
+          <div className="container">
+            <div className="row gx-lg-5 align-items-center">
+              <div className="col-lg-6 mb-5 mb-lg-0">
+                <h1 className="my-5 display-3 fw-bold ls-tight">
+                  The best offer <br />
+                  <span className="text-primary">for your business</span>
+                </h1>
+                <p style={{ color: 'hsl(217, 10%, 50.8%)' }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                  quibusdam tempora at cupiditate quis eum maiores libero
+                  veritatis? Dicta facilis sint aliquid ipsum atque?
+                </p>
               </div>
-              <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                <form>
-                  {/* Email input */}
-                  <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form1Example13">Email address</label>
-                    <input 
-                      type="email" 
-                      id="form1Example13" 
-                      className="form-control form-control-lg" 
-                      placeholder="Enter your email"
-                    />
+              <div className="col-lg-6 mb-5 mb-lg-0">
+                <div className="card">
+                  <div className="card-body py-5 px-md-5">
+                    <form>
+                      {/* 2 column grid layout with text inputs for the first and last names */}
+                      <div className="row">
+                        <div className="col-md-6 mb-4">
+                          <div data-mdb-input-init className="form-outline">
+                            <input type="text" id="form3Example1" className="form-control" />
+                            <label className="form-label" htmlFor="form3Example1">First name</label>
+                          </div>
+                        </div>
+                        <div className="col-md-6 mb-4">
+                          <div data-mdb-input-init className="form-outline">
+                            <input type="text" id="form3Example2" className="form-control" />
+                            <label className="form-label" htmlFor="form3Example2">Last name</label>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Email input */}
+                      <div data-mdb-input-init className="form-outline mb-4">
+                        <input type="email" id="form3Example3" className="form-control" />
+                        <label className="form-label" htmlFor="form3Example3">Email address</label>
+                      </div>
+                      {/* Password input */}
+                      <div data-mdb-input-init className="form-outline mb-4">
+                        <input type="password" id="form3Example4" className="form-control" />
+                        <label className="form-label" htmlFor="form3Example4">Password</label>
+                      </div>
+                      {/* Checkbox */}
+                      <div className="form-check d-flex justify-content-center mb-4">
+                        <input className="form-check-input me-2" type="checkbox" defaultValue id="form2Example33" defaultChecked />
+                        <label className="form-check-label" htmlFor="form2Example33">
+                          Subscribe to our newsletter
+                        </label>
+                      </div>
+                      {/* Submit button */}
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">
+                        Sign up
+                      </button>
+                      {/* Register buttons */}
+                      <div className="text-center">
+                        <p>or sign up with:</p>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
+                          <i className="fab fa-facebook-f" />
+                        </button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
+                          <i className="fab fa-google" />
+                        </button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
+                          <i className="fab fa-twitter" />
+                        </button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-link btn-floating mx-1">
+                          <i className="fab fa-github" />
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                  {/* Password input */}
-                  <div className="form-outline mb-4">
-                    <label className="form-label" htmlFor="form1Example23">Password</label>
-                    <input 
-                      type="password" 
-                      id="form1Example23" 
-                      className="form-control form-control-lg" 
-                      placeholder="Enter your password"
-                    />
-                  </div>
-                  <div className="d-flex justify-content-around align-items-center mb-4">
-                    {/* Checkbox */}
-                    <div className="form-check">
-                      <input 
-                        className="form-check-input" 
-                        type="checkbox" 
-                        defaultValue="" 
-                        id="form1Example3" 
-                        defaultChecked 
-                      />
-                      <label className="form-check-label" htmlFor="form1Example3">
-                        Remember me
-                      </label>
-                    </div>
-                    <a href="#!">Forgot password?</a>
-                  </div>
-                  {/* Submit button */}
-                  <button 
-                    type="submit" 
-                    className="btn btn-primary btn-lg w-100 mb-3"
-                  >
-                    Sign in
-                  </button>
-                  <div className="divider d-flex align-items-center my-4">
-                    <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-                  </div>
-                  <button 
-                    type="button"
-                    className="btn btn-lg w-100 mb-2" 
-                    style={{ backgroundColor: '#3b5998', color: 'white' }}
-                  >
-                    <i className="fab fa-facebook-f me-2" />
-                    Continue with Facebook
-                  </button>
-                  <button 
-                    type="button"
-                    className="btn btn-lg w-100" 
-                    style={{ backgroundColor: '#55acee', color: 'white' }}
-                  >
-                    <i className="fab fa-twitter me-2" />
-                    Continue with Twitter
-                  </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+        {/* Jumbotron */}
+      </section>
+      {/* Section: Design Block */}
+
       <Footer />
     </div>
   )
