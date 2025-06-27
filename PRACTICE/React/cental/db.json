@@ -1,0 +1,97 @@
+{
+  "blog": [
+    {
+      "id": "1",
+      "title": "Rental Cars how to check driving fines?",
+      "desc": " Eius libero soluta impedit eligendi? Quibusdam, laudantium.",
+      "comment": 3,
+      "name": "Martin",
+      "date": "12-dec-2023",
+      "img": "https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?_gl=1*6jkkuh*_ga*MTcyNjY2NTIxNS4xNzUwMzE4NjY0*_ga_8JE65Q40S6*czE3NTAzMTg2NjMkbzEkZzEkdDE3NTAzMTg2NjkkajU0JGwwJGgw"
+    },
+    {
+      "id": "2",
+      "title": "Rental cost of sport and other cars",
+      "desc": "This are rentals car at good price.",
+      "comment": 4,
+      "name": "Martin",
+      "date": "12-dec-2023",
+      "img": "https://images.pexels.com/photos/39855/lamborghini-brno-racing-car-automobiles-39855.jpeg"
+    },
+    {
+      "id": "99b3"
+    },
+    {
+      "id": "1750399712699",
+      "title": "abdkasfkj",
+      "desc": "JHVHJAVD",
+      "comment": "21",
+      "name": "lodhi Aakash",
+      "date": "2025-06-15",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+    },
+    {
+      "id": "",
+      "title": "",
+      "desc": "",
+      "comment": "",
+      "name": "",
+      "date": "",
+      "img": ""
+    },
+    {
+      "id": "",
+      "title": "",
+      "desc": "",
+      "comment": "",
+      "name": "",
+      "date": "",
+      "img": ""
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "desc": " Frontend",
+      "name": "Martin",
+      "img": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+    },
+    {
+      "id": "2",
+      "desc": " Back-end",
+      "name": "Aniket Gupta",
+      "img": "https://images.pexels.com/photos/27789019/pexels-photo-27789019.jpeg?_gl=1*1p90yxs*_ga*MTcyNjY2NTIxNS4xNzUwMzE4NjY0*_ga_8JE65Q40S6*czE3NTAzMzQyMTckbzIkZzEkdDE3NTAzMzQ3MDYkajYwJGwwJGgw"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "User1",
+      "email": "User1@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "User2",
+      "email": "User2@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "3",
+      "name": "User3",
+      "email": "User3@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin123@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
