@@ -1,0 +1,89 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "shubham jadav",
+      "email": "jadavshubham5@gmail.com",
+      "password": "1234",
+      "mobiel": "12345678901",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "sujal jadav",
+      "email": "jadavsujal5@gmail.com",
+      "password": "2345",
+      "mobiel": "54345678901",
+      "status": "unblock"
+    },
+    {
+      "id": "1751275434914",
+      "name": "Aakash Lodhi",
+      "email": "AKASHLODHI7836@GMAIL.COM",
+      "password": "1234",
+      "status": "unblock"
+    }
+  ],
+  "contact": [
+    {
+      "id": "1",
+      "name": "jay",
+      "email": "jay@gmail.com",
+      "comment": "hihk"
+    },
+    {
+      "id": "2",
+      "name": "shubham",
+      "email": "shubham@gmail.com",
+      "comment": "asdjhkughuk"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "Akash",
+      "email": "admin1@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "list": [
+    {
+      "id": "1750843336965",
+      "type": "Home",
+      "img": "https://images.pexels.com/photos/2816284/pexels-photo-2816284.jpeg",
+      "price": "55666",
+      "title": "Vi;la",
+      "add": "there is a villa in the hiills",
+      "badge": "Rent"
+    },
+    {
+      "id": "1750866780432",
+      "type": "Villa",
+      "img": "https://images.pexels.com/photos/2816284/pexels-photo-2816284.jpeg",
+      "price": "5552",
+      "title": "villa in Remote Location",
+      "add": "kldsanfldsnvfds",
+      "badge": "Sell"
+    }
+  ],
+  "agents": [
+    {
+      "img": "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg",
+      "name": "Lodhi Aakash",
+      "Profile": "Front-end Dev",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "img": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+      "name": "Ciccilia",
+      "Profile": "Back-end Developer"
+    },
+    {
+      "img": "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+      "name": "Karan",
+      "Profile": "UI/IX",
+      "id": "1751099837577"
+    }
+  ]
+}
