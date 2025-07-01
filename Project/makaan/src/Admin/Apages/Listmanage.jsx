@@ -94,7 +94,7 @@ function Listmanage() {
 
             <h1 className='text-center my-4'>This is List Manage</h1>
 
-            <div className='container'>
+            <div className='container-fluid'>
                 <table className="table table-hover">
                     <thead className='text-center'>
                         <tr>

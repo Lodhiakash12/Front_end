@@ -23,6 +23,9 @@ import Register from "./Website/Pages/Register";
 import Editprofile from "./Website/Pages/Editprofile";
 import AEditprofile from "./Admin/Apages/AEditprofile";
 import AAbout from "./Admin/Apages/AAbout";
+import Addpro from "./Website/Pages/Addpro";
+import Addtest from "./Website/Pages/Addtest";
+import Atesttominy from "./Admin/Apages/Atesttominy";
 
 
 function App() {
@@ -42,6 +45,8 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Editprofile" element={<Editprofile />} />
           <Route path="/AdminAbout" element={<AAbout />} />
+          <Route path="/Addproperty" element={<Addpro />} />
+          <Route path="/Addtestimony" element={<Addtest />} />
 
           <Route path="*" element={<NotFound />} />
 
@@ -54,6 +59,9 @@ function App() {
           <Route path="/Addagents" element={<Agentadd />} />
           <Route path="/Alogin" element={<Alogin />} />
           <Route path="/AEditprofile" element={<AEditprofile />} />
+           <Route path="/managetestimony" element={<Atesttominy />} />
+          
+
 
 
         </Routes>

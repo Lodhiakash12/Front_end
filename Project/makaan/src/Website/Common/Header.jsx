@@ -69,7 +69,7 @@ function Header() {
                             </div>
                             <NavLink to="/Contact" className="nav-item nav-link">Contact</NavLink>
                         </div>
-                        <a href className="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                        <NavLink to="/Addproperty" className="btn btn-primary px-3 d-none d-lg-flex">Add Property</NavLink>
                         {
                             (() => {
                                 if (localStorage.getItem("Uid")) {

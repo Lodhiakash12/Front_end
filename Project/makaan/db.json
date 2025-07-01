@@ -64,6 +64,42 @@
       "title": "villa in Remote Location",
       "add": "kldsanfldsnvfds",
       "badge": "Sell"
+    },
+    {
+      "id": "1751355434540",
+      "type": "Farm House",
+      "img": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg",
+      "price": "6566",
+      "title": "Lavish House",
+      "add": "House in the forest With A Breath Taking View",
+      "badge": "Sell"
+    },
+    {
+      "id": "1751355471695",
+      "type": "Farm House",
+      "img": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg",
+      "price": "2242",
+      "title": "csvsdjkl",
+      "add": "klnaANDLKanaBabcKJADBKA",
+      "badge": "Sell"
+    },
+    {
+      "id": "1751355613524",
+      "type": "Farm House",
+      "img": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg",
+      "price": "313",
+      "title": "cjhvasjcvhsacvjhsa",
+      "add": "jkbcakjcbkjascsvchjvsac",
+      "badge": "Sell"
+    },
+    {
+      "id": "1751355751492",
+      "type": "Farm House",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+      "price": "12121",
+      "title": "cvsvcAVS JhvahasfvJA",
+      "add": "JH DKSBAKCBcsbsakjcbskjackjsabcjksa",
+      "badge": "Sell"
     }
   ],
   "agents": [
@@ -84,6 +120,26 @@
       "name": "Karan",
       "Profile": "UI/IX",
       "id": "1751099837577"
+    }
+  ],
+  "testimony": [
+    {
+      "title": "Front-End Dev",
+      "id": "1",
+      "desc": " r ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.",
+      "name": "Aakash Lodhi"
+    },
+    {
+      "id": "1751364698640",
+      "title": "Backend",
+      "desc": "aacvhcvvcsjsvcaVXVCCscvsasu",
+      "name": "Aniket"
+    },
+    {
+      "id": "",
+      "title": "",
+      "desc": "",
+      "name": ""
     }
   ]
 }
