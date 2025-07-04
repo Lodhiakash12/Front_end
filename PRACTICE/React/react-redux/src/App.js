@@ -1,13 +1,25 @@
 import React from "react";
-import Todo from "./slices/todo/Todo";
-import Addtodo from "./slices/todo/Addtodo";
+// import Count from "./features/Count";
+import Todos from "./features/todo/Todos";
+import Addtodo from "./features/todo/Addtodo";
+ 
+ 
+ 
+
 
 function App() {
   return (
     <div className="App">
       <h1>This is React Redux</h1>
+       
+ 
       <Addtodo/>
-      <Todo/>
+      <Todos/>
+
+
+
+
+
     </div>
   );
 }
