@@ -15,7 +15,7 @@ function Addtodo() {
         setform("")
     }
 
-     
+
 
 
 
@@ -26,7 +26,7 @@ function Addtodo() {
     return (
         <div>
             <form action="">
-                <input value={form} onChange={(e)=>setform(e.target.value)} type="text" name="" id="" />
+                <input value={form} onChange={(e) => setform(e.target.value)} type="text" name="" id="" />
                 <button onClick={getdata}>Add</button>
             </form>
 
