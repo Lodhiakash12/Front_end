@@ -44,16 +44,15 @@ export const deleteuser = createAsyncThunk(
 )
 
 //update
+//update
 export const updateuser = createAsyncThunk(
-    'updateuser', async (data, { rejectWithValue }) => {
+    'updateuser',
+    async (data, { rejectWithValue }) => {
         try {
-
             const res = await axios.put(`http://localhost:3000/user/${data.id}`, data)
-            const result = await res.data
-            return result
-
+            return res.data; // Return the complete updated user object
         } catch (error) {
-            return rejectWithValue(error)
+            return rejectWithValue(error.response?.data || error.message)
         }
     }
 )
@@ -125,17 +124,13 @@ export const userSlice = createSlice({
             })
             .addCase(updateuser.fulfilled, (state, action) => {
                 state.loading = false;
-                // state.user = state.user.filter((data,index)=> data.id === action.payload)
-
-                state.user = state.user.map((ele) =>
-                    // edit query
-                    ele.id = action.payload.id ? action.payload : ele
-
-                )
+                state.user = state.user.map(user =>
+                    user.id === action.payload.id ? action.payload : user
+                );
             })
             .addCase(updateuser.rejected, (state, action) => {
                 state.loading = false;
-                state.error = action.payload
+                state.error = action.payload;
             })
 
     }

@@ -4,71 +4,100 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { updateuser } from '../Slicedata/userSlice'
 
 function Update() {
-
     const redirect = useNavigate()
-
-    const { id } = useParams()
-    console.log(id)
-
-    const [updatedata, setupdatadata] = useState([])
-
+    const { id } = useParams() // Get the user ID from URL params
     const dispatch = useDispatch()
-
     const { user } = useSelector((state) => state.users)
 
-    useEffect(()=>{
+    // Initialize state with proper structure
+    const [updatedata, setupdatadata] = useState({
+        id: '',
+        name: '',
+        email: '',
+        password: ''
+    })
 
-        const singleuser = user.filter((data)=> data.id === id)
-        console.log(singleuser[0])
-        setupdatadata(singleuser[0])
+    // Load user data when component mounts or user/id changes
+    useEffect(() => {
+        if (user && id) {
+            const singleuser = user.find((data) => data.id === id)
+            if (singleuser) {
+                setupdatadata(singleuser)
+            }
+        }
+    }, [user, id]) // Proper dependencies
 
-    },[])
-
-    console.log(user)
-
-    const getchange =(e)=>{
+    // Handle form input changes
+    const getchange = (e) => {
         setupdatadata({
             ...updatedata,
-            [e.target.name]:e.target.value
+            [e.target.name]: e.target.value
         })
-        console.log(updatedata)
     }
-    const getupdate=(e)=>{
-        e.preventDefault();
 
-        dispatch(updateuser(updatedata))
+    // Handle form submission
+    const getupdate = (e) => {
+        e.preventDefault()
+        
+        // Destructure to separate id from other user data
+        const { id, ...userData } = updatedata
+        
+        // Dispatch the update action with proper format
+        dispatch(updateuser({ 
+            id: id, 
+            data: userData 
+        }))
+        
+        // Redirect after update
         redirect("/")
-    
     }
 
     return (
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6 mx-auto">
-                        <h1>hello this Form data Update</h1>
-                        <form action="" onSubmit={getupdate}>
-                            <div>
-                                <div className="mb-3">
-                                    <label htmlFor="exampleFormControlInput2" className="form-label">Name </label>
-                                    <input type="text" onChange={getchange} value={updatedata && updatedata.name} name='name' className="form-control" id="exampleFormControlInput2" placeholder="your name" />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-                                    <input type="email" onChange={getchange} value={updatedata && updatedata.email} name='email' className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="exampleFormControlInput3" className="form-label">your password</label>
-                                    <input type="password"  onChange={getchange} value={updatedata && updatedata.password} name='password' className="form-control" id="exampleFormControlInput3" placeholder="your password" />
-                                </div>
-                                <div className="mb-3">
-
-                                    <input type="submit" />
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6 mx-auto">
+                    <h1>Update User</h1>
+                    <form onSubmit={getupdate}>
+                        <div className="mb-3">
+                            <label className="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                onChange={getchange} 
+                                value={updatedata.name || ''} 
+                                name="name" 
+                                className="form-control" 
+                                placeholder="Your name" 
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                onChange={getchange} 
+                                value={updatedata.email || ''} 
+                                name="email" 
+                                className="form-control" 
+                                placeholder="email@example.com" 
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Password</label>
+                            <input 
+                                type="password"  
+                                onChange={getchange} 
+                                value={updatedata.password || ''} 
+                                name="password" 
+                                className="form-control" 
+                                placeholder="Your password" 
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary">
+                            Update User
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
