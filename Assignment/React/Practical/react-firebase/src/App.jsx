@@ -1,15 +1,32 @@
-// src/App.jsx
-import React from 'react';
-import MyState from './context/MyState'; // Import the default export
-import Home from './pages/Home/Home';
+import MyContextWrapper from "./Context/MyContextWrapper"
+import Home from "./Pages/Home"
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddUser from "./Pages/AddUser";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import EditUser from "./Pages/EditUser";
+
+
 function App() {
   return (
-    <MyState>  {/* Use the provider component directly */}
-       
-      <h1>This is Fire Store</h1>
-      <Home />
-    </MyState>
-  );
+    <BrowserRouter>
+
+      <MyContextWrapper>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/adduser" element={<AddUser />} />
+          <Route path="/edituser" element={<EditUser />} />
+        </Routes>
+
+      </MyContextWrapper>
+      <ToastContainer />
+    </BrowserRouter>
+
+
+  )
 }
 
-export default App;
+export default App
