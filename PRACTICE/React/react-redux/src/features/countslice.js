@@ -17,6 +17,9 @@ export const countslice=createSlice({
         },
         zero:(state)=>{
             state.value=initialState.actions
+        },
+         zero:(state)=>{
+            state.value=initialState.actions
         }
 
     }
