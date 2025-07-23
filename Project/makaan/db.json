@@ -25,9 +25,16 @@
     },
     {
       "id": "1751702062783",
-      "name": "Aniket",
+      "name": "Aniket76567",
       "email": "admin1@gmail.com",
       "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "1753174892902",
+      "name": "vjhv",
+      "email": "admin@gmail.com",
+      "password": "1111",
       "status": "unblock"
     }
   ],
